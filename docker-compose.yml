@@ -1,0 +1,56 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: murcia_sentinel
+      POSTGRES_USER: sentinel
+      POSTGRES_PASSWORD: sentinelpass
+    ports:
+      - "55432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U sentinel -d murcia_sentinel"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  api:
+    build: ./api
+    environment:
+      DATABASE_URL: postgresql+psycopg://sentinel:sentinelpass@db:5432/murcia_sentinel
+      # El frontend se sirve en http://localhost:8080 (Nginx)
+      CORS_ORIGINS: "http://localhost:8080,http://127.0.0.1:8080"
+      DB_CONNECT_RETRIES: "40"
+      DB_CONNECT_SLEEP: "1.5"
+    expose:
+      - "8000"
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+
+  worker:
+    build: ./worker
+    environment:
+      API_BASE: "http://api:8000"
+      POLL_SECONDS: "20"
+    depends_on:
+      api:
+        condition: service_started
+    restart: unless-stopped
+
+  web:
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    volumes:
+      - ./web/html:/usr/share/nginx/html:ro
+      - ./web/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      api:
+        condition: service_started
+    restart: unless-stopped
+
+volumes:
+  pgdata:
