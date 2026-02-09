@@ -1,15 +1,11 @@
-# Murcia Sentinel — GitHub Pages Ready
+# MURCIA-INCIDENCIAS — Static (HTML + JSON)
 
-- `docs/` → sitio estático para GitHub Pages (UI)
-- `api/`, `worker/`, `docker-compose.yml` → backend (Docker)
+Este repo está reorganizado para publicar **solo HTML + JSON** en GitHub Pages:
 
-## GitHub Pages
-1) Activa Pages para `docs/`
-2) Edita `docs/config.js` y define `window.API_BASE`
+- `docs/index.html`  → UI
+- `docs/data/*.json` → datos (incidencias/estadísticas/fuentes)
+- `docs/config.js`   → configuración
+- `docs/sw.js`       → cache offline
 
-## Local (fullstack)
-```powershell
-docker compose up --build
-```
-Luego abre:
-- http://localhost:8080
+## Publicar
+Settings → Pages → GitHub Actions.

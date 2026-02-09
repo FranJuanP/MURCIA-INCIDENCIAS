@@ -1,0 +1,94 @@
+{
+  "items": [
+    {
+      "group": "EMERGENCIAS",
+      "label": "🔴 112 Región de Murcia",
+      "url": "https://112rmurcia.carm.es/"
+    },
+    {
+      "group": "EMERGENCIAS",
+      "label": "🚒 Consorcio Extinción Incendios (CEIS)",
+      "url": ""
+    },
+    {
+      "group": "FUERZAS DE SEGURIDAD",
+      "label": "👮 Policía Local Murcia",
+      "url": ""
+    },
+    {
+      "group": "FUERZAS DE SEGURIDAD",
+      "label": "🔵 Policía Nacional",
+      "url": "https://www.policia.es/"
+    },
+    {
+      "group": "FUERZAS DE SEGURIDAD",
+      "label": "🟢 Guardia Civil",
+      "url": "https://www.guardiacivil.es/"
+    },
+    {
+      "group": "FUERZAS DE SEGURIDAD",
+      "label": "🚔 UDEV Murcia",
+      "url": ""
+    },
+    {
+      "group": "MEDIOS",
+      "label": "📰 La 7 TV - Noticias Murcia",
+      "url": ""
+    },
+    {
+      "group": "MEDIOS",
+      "label": "📺 La Verdad - Murcia",
+      "url": "https://www.laverdad.es/murcia/"
+    },
+    {
+      "group": "MEDIOS",
+      "label": "📻 Cope Murcia",
+      "url": ""
+    },
+    {
+      "group": "ADMINISTRACIÓN",
+      "label": "🏛️ CARM - Comunidad Autónoma",
+      "url": "https://www.carm.es/"
+    },
+    {
+      "group": "ADMINISTRACIÓN",
+      "label": "🏢 Ayuntamiento de Murcia",
+      "url": "https://www.murcia.es/"
+    },
+    {
+      "group": "ADMINISTRACIÓN",
+      "label": "🏢 Ayuntamiento de Cartagena",
+      "url": "https://www.cartagena.es/"
+    },
+    {
+      "group": "ADMINISTRACIÓN",
+      "label": "🏢 Ayuntamiento de Lorca",
+      "url": "https://www.lorca.es/"
+    },
+    {
+      "group": "REDES",
+      "label": "🐦 @112rmurcia",
+      "url": "https://x.com/112rmurcia"
+    },
+    {
+      "group": "REDES",
+      "label": "🐦 @MurciaPolicia",
+      "url": "https://x.com/MurciaPolicia"
+    },
+    {
+      "group": "REDES",
+      "label": "🐦 @policia (Nacional)",
+      "url": "https://x.com/policia"
+    },
+    {
+      "group": "REDES",
+      "label": "🐦 @guardiacivil",
+      "url": "https://x.com/guardiacivil"
+    },
+    {
+      "group": "REDES",
+      "label": "🐦 @emergencias_carm",
+      "url": "https://x.com/emergencias_carm"
+    }
+  ]
+}
